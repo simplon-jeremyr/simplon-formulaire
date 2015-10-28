@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<img src="http://emilieramenesafraise.fr/wp-content/uploads/2014/08/tampon-teste-et-approuve.png"/>
+ <h3>Formulaire à remplir :</h3>
+
+<script type="text/javascript">
+function envoiFormulaire(form)
+{
+alert("Nom : " + document.form.nom.value + "\nAge : " + document.form.ages.value + "\nE-mail : " + document.form.mail.value + "\nAdresse : " + document.form.adresse.value + "\nVille : " + document.form.ville.value + "\nMot de passe : " + document.form.passw.value + "\nRaisons : " + document.form.raison.value)
+
+document.write('<a href="mailto:j.raynaud@outlook.com' +
+'?subject=' +
+document.form.objet.value +
+'&body=' +
+document.form.message.value +
+"%0A Nom : " + document.form.nom.value +
+"%0A Age : " + document.form.age.value +
+"%0A E-mail : " + document.form.mail.value +
+"%0A Adresse : " + document.form.adresse.value +
+"%0A Ville : " + document.form.ville.value +
+"%0A Mot de passe : " + document.form.passw.value +
+"%0A Raisons : " + document.form.raison.value +
+'" id="envoiMail">' +
+'Envoyer le mail' +
+'<' +
+'/a>)';
+
+document.getElementById('envoiMail').click();
+window.locaton.replace("index.html");
+}
+</script>
+</head>
+
+
+<form method="post" action="formulaire1.php">
+
+	<input type="text" name="nom" id="name" placeholder="Nom complet"><br>
+  <input type="text" name="age" id="ages" placeholder="Age"><br>
+	<input type="text" name="mail" id="email" placeholder="e-mail"><br>
+<input type="text" name="adresse" id="adress" placeholder="Adresse"><br>
+<input type="text" name="ville" id="city" placeholder="Ville"><br>
+<input type="password" name="passw" id="mdp" placeholder="Mot de passe"><br>
+<input type="text" name="raison" id="raisons" placeholder="Quelle est la raison de votre visite?"><br>
+
+
+	<button onclick="Valider" id="bout" >Valider</button>
+<script type="text/javascript">
+
+</script>
+</form>
